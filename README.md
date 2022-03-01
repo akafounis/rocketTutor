@@ -10,4 +10,4 @@ npm install
 npm start
 ```
 
-![alt text](images/FrontEnd.png)
+![ScreenShot](/Images/FrontEnd.png)
