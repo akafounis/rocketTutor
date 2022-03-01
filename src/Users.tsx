@@ -18,7 +18,10 @@ import Tooltip from '@mui/material/Tooltip';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import { visuallyHidden } from '@mui/utils';
+// there is a restriction that doesn't let me access folders outside the src file,
+// therefore I had to put the .json file inside the src
 import data from './MOCK_DATA.json'
+import { useState } from 'react';  
 
 interface Data {
     id: number,
@@ -62,14 +65,6 @@ const rows = data.map( (data) => {
 // 5. gender
 // 6. ip address
 // 7. time
-
-
-
-
-// const rows = [
-//   createData(1, 'Angelos', 'Kafounis', 'kafounis@kafounis.com', 'male', '10.10.10', '48'),
-//   createData(1, 'Angelos', 'Kafounis', 'kafounis@kafounis.com', 'male', '10.10.10', '28')
-// ];
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
   if (b[orderBy] < a[orderBy]) {
